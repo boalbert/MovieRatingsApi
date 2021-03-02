@@ -1,6 +1,6 @@
 package com.chokealot.genreservice.repository;
 
-import com.chokealot.genreservice.dto.GenreDto;
+
 import com.chokealot.genreservice.models.Genre;
 import org.springframework.data.jpa.repository.JpaRepository;
 

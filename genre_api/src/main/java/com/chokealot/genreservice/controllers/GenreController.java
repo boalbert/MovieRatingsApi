@@ -31,7 +31,7 @@ public class GenreController {
         return genreService.getAllGenres();
     }
 
-    @PostMapping("/genre/")
+    @PostMapping("/genre")
     @ResponseStatus(HttpStatus.CREATED)
     public GenreDto create(@RequestBody GenreDto genreDto){
         return genreService.createGenre(genreDto);
