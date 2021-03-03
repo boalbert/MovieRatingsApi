@@ -11,8 +11,6 @@ import se.joakimliden.springlab.repositories.LanguageRepository;
 import java.util.List;
 import java.util.Optional;
 
-//validera här!
-
 @Service
 public class LanguageService implements se.joakimliden.springlab.services.Service {
 
@@ -39,7 +37,6 @@ public class LanguageService implements se.joakimliden.springlab.services.Servic
         if (language.getLanguage().isEmpty()) {
             throw new RuntimeException();
         }
-        //Mapp from LanguageDto to Language
         return languageMapper.mapp(languageRepository.save(languageMapper.mapp(language)));
     }
 
@@ -61,7 +58,6 @@ public class LanguageService implements se.joakimliden.springlab.services.Servic
         }
     }
 
-        //helt onödig nu..
     @Override
     public LanguageDto update(Long id, LanguageDto languageDto) {
         Optional<Language> language = languageRepository.findById(id);
@@ -78,11 +74,6 @@ public class LanguageService implements se.joakimliden.springlab.services.Servic
 
     @Override
     public Optional<LanguageDto> findByLanguage(String language) {
-
         return languageMapper.mapp(languageRepository.findAllByLanguage(language));
-        //        return languageMapper.mapp(languageRepository.findAllByLanguage(language));
-
-//       return (LanguageDto) languageMapper.mapp(languageRepository.findAllByLanguage(language));
-//       return languageMapper.mapp(languageRepository.findAllByLanguage(language));
     }
 }

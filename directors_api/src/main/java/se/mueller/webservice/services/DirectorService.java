@@ -34,6 +34,7 @@ public class DirectorService implements se.mueller.webservice.services.Service {
 
     @Override
     public Optional<Directordto> getOne(Long id) {
+
         return directorMapper.mapp(directorRepository.findById(id));
     }
 

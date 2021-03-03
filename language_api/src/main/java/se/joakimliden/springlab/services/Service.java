@@ -16,7 +16,6 @@ public interface Service {
 
     LanguageDto replace(Long id, LanguageDto languageDto);
 
-    //helt onödig nu..
     LanguageDto update(Long id, LanguageDto languageDto);
 
     Optional<LanguageDto> findByLanguage(String language);

@@ -35,24 +35,5 @@ public class LanguageMapper {
                 .stream()
                 .map(this::mapp)
                 .collect(Collectors.toList());
-//        List<LanguageDto> languageDtoList = new ArrayList<>();
-//        for (var language : all) {
-//            languageDtoList.add(mapp(language));
-//        }
-//        return languageDtoList;
     }
-
-//    public Optional<LanguageDto> mappListToOptional(List<Language> allByLanguage) {
-//        if (allByLanguage.isEmpty()) {
-//            return Optional.empty();
-//        }
-//        return Optional.of(mapp(allByLanguage));
-//    }
-
-//    public Optional<LanguageDto> mapp(List<Language> language) {
-//        if (language.isEmpty()) {
-//            return Optional.empty();
-//        }
-//        return Optional.of(mapp(language.get()));
-//    }
 }

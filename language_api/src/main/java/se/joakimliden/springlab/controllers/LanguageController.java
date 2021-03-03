@@ -11,14 +11,11 @@ import java.util.List;
 import java.util.Optional;
 
 
-//ingen validering i controllerklassen!
-
-@RestController // ("/languages")   (för att slippa skriva hela urlen i metoderna nedan, obs funkar ej...)
+@RestController
 public class LanguageController {
 
     private Service service;
 
-//    @Autowired    //behöver inte
     public LanguageController(Service service) {
         this.service = service;
     }
@@ -46,12 +43,12 @@ public class LanguageController {
         service.delete(id);
     }
 
-    @PutMapping("/languages/{id}")  //put gör om hela objektet (bara språk ändå i detta fallet)
+    @PutMapping("/languages/{id}")
     public LanguageDto replace(@RequestBody LanguageDto languageDto, @PathVariable Long id) {
         return service.replace(id, languageDto);
     }
 
-    @PatchMapping("/languages/{id}")  //uppdaterar bara enskilda fält (19/2 11.45)
+    @PatchMapping("/languages/{id}")
     public LanguageDto update(@RequestBody LanguageDto languageDto, @PathVariable Long id) {
         return service.update(id, languageDto);
     }

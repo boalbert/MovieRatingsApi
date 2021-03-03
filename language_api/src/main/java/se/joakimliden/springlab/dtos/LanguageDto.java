@@ -1,8 +1,5 @@
 package se.joakimliden.springlab.dtos;
 
-
-    //Data TransferObject
-    //
 public class LanguageDto {
 
         private long id;
